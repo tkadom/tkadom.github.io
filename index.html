@@ -30,7 +30,7 @@
 				<div class="floatleft">
 				<p></p>
 					<img src="img/arduino.png" width="250"></img>
-					<img src="img/arduinoOverview.png" width="250"></img>
+					<img src="img/arduinooverview.png" width="250"></img>
 				</div>
 				<div class="floatright">
 				<h2>
@@ -88,20 +88,23 @@
 				</center>
 			</section>
 			<section class="step" data-x="1200" data-y="600" data-rotate="180">
-				<div class="wrap">
-				<div class="floatleft">
 				<pre class="prettyprint">
-void main() {
-	int x = foo();
-	int y= bar()); /* this is a comment */
-	exit(1);
+int photoRPin = 0; 
+int lightLevel;
+
+void setup() {
+ Serial.begin(9600);
+}
+
+void loop(){
+ lightLevel=analogRead(photoRPin);
+ 
+ Serial.println(lightLevel);
+ 
+ //slow down the transmission for effective Serial communication.
+ delay(50);
 }
 				</pre>
-				</div>
-				<div class="floatright">
-					some text
-				</div
-			</div>
 			</section>
 			
 		</div>
