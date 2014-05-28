@@ -1,0 +1,16 @@
+.wrap {
+width: 100%;
+}
+
+.floatleft, .floatright {
+    margin-top: 20px;
+    margin-left: 20px;
+    float: left;
+    width: 40%;
+    height: 400px;
+}
+
+.floatright {
+    width: 40%;
+    height: 400px;
+}

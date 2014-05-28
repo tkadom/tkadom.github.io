@@ -2,8 +2,10 @@
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="css/impress.css">
+		<link rel="stylesheet" type="text/css" href="css/pretty.css">
+		<link rel="stylesheet" type="text/css" href="css/float.css">
 		<meta charset="utf-8" />
-		<title>Arduino tutorial</title>
+		<title>Tutorial</title>
 	</head>
 	<body>
 		<div id="impress" class="impress-not-supported">
@@ -14,20 +16,97 @@
 			<div id="overview" class="step" data-x="600" data-y="300" data-scale="2"></div>
 
 			<header class="step">
-				<h1> Arduino Presentation </h1>
+				<h1> Introduction to Arduino Microcontrollers </h1>
 			</header>
 			<section class="step" data-y="600">
-				<p> Some text on slide 2 </p>
+				<p> What is a Microcontroller vs. a Microprocessor? </p>
+				<center>
+				<img style="margin-top:40px;" src="img/mpvsmc.png" width="500"></img>
+				</center>
+			</section>
+			<section class="step" data-y="1200" >
+				<p> What is an Arduino? </p>
+				<div class="wrap">
+				<div class="floatleft">
+				<p></p>
+					<img src="img/arduino.png" width="250"></img>
+					<img src="img/arduinoOverview.png" width="250"></img>
+				</div>
+				<div class="floatright">
+				<h2>
+				<ul>
+					<li> Physical computing platform </li>
+					<li> USB programmable </li>
+					<li> Large Community </li>
+					<li> Multiple platforms </li>
+					<li> Based on ATmega328 - 8bit</li>
+					<li> 32k Memory </li>
+					<li> PWM, I2C, SPI </li>
+					<li> 14 Digital I/O ports (6 PWM outputs) </li>
+					<li> 6 analog inputs </li>
+				</ul>
+				</h2>
+				</div>
+			</section>
+			<section class="step" data-y="1800">
+				<p> shapes and sizes </p>
+				<center>
+				<img style="margin-top:40px;" src="img/arduinoboards.jpg" width="700"></img>
+				</center>
+			</section>
+			<section class="step" data-y="2400" >
+				<p> What are sensors? </p>
+				<div class="wrap">
+				<div class="floatleft">
+				<p></p>
+					<img src="img/sensors.png" width="300"></img>
+					<img src="img/sensors2.jpeg" width="300"></img>
+				</div>
+				<div class="floatright">
+				<h2>
+				<ul>
+					<li> light </li>
+					<li> sound </li>
+					<li> body heat </li>
+					<li> vision </li>
+					<li> distance </li>
+					<li> infrared </li>
+					<li> touch </li>
+					<li> motion </li>
+					<li> accelerometer </li>
+					<li> GPS </li>
+					<li> WIFI </li>
+					<li> Bluetooth </li>
+					<li> Other computing devices.. I2C </li>
+				</ul>
+				</h2>
+				</div>
+			</section>
+			<section class="step" data-y="3000">
+				<center>
+				<img style="margin-top:10px;" src="img/arduinoIDE.jpg" width="600"></img>
+				</center>
 			</section>
 			<section class="step" data-x="1200" data-y="600" data-rotate="180">
-				<p> Some more text on slide 3 </p>
+				<div class="wrap">
+				<div class="floatleft">
+				<pre class="prettyprint">
+void main() {
+	int x = foo();
+	int y= bar()); /* this is a comment */
+	exit(1);
+}
+				</pre>
+				</div>
+				<div class="floatright">
+					some text
+				</div
+			</div>
 			</section>
-			<footer class="step" data-y="600" data-x=1200" data-scale="0.25">
-				<p>github repo is here:</p>
-			</footer>
 			
 		</div>
 		<script src="js/impress.js"></script>
+		<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
 		<script>impress();</script>
 	</body>
 </html>
