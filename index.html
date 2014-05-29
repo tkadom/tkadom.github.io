@@ -88,6 +88,7 @@
 				</center>
 			</section>
 			<section class="step" data-x="1200" data-y="600" data-rotate="180">
+				<p> Code... </p>
 				<pre class="prettyprint">
 int photoRPin = 0; 
 int lightLevel;
@@ -101,10 +102,69 @@ void loop(){
  
  Serial.println(lightLevel);
  
- //slow down the transmission for effective Serial communication.
  delay(50);
 }
-				</pre>
+				</pre>	
+				<center>
+				<img src="img/fiz-1.png" width="400"></img>
+				</center>
+			</section>
+			<section class="step" data-x="1200" data-y="1200" data-rotate="180">
+				<p> Find a good signal level for low light.. </p>
+				<pre class="prettyprint">
+int photoRPin = 0; 
+int lightLevel;
+
+void setup() {
+ Serial.begin(9600);
+}
+
+void loop(){
+ lightLevel=analogRead(photoRPin);
+ if ( lightLevel < 600 )
+     Serial.println("SIGNAL");
+ 
+ delay(50);
+}
+				</pre>	
+				<center>
+				<img src="img/fiz-1.png" width="400"></img>
+				</center>
+			</section>
+			<section class="step" data-x="1200" data-y="1800" data-rotate="180">
+				<p> Add a Servo Motor... </p>
+				<center>
+				<img style="margin-top:40px;" src="img/fiz-2.png" width="700"></img>
+				</center>
+			</section>
+			
+			<section class="step" data-x="1200" data-y="2400" data-rotate="180">
+				<p> Update Code </p>
+				<pre class="prettyprint">
+#include < Servo.h >
+
+Servo myservo;
+int photoRPin = 0; 
+int lightLevel;
+
+void setup() {
+ Serial.begin(9600);
+ myservo.attach(9);
+}
+
+void loop(){
+ lightLevel=analogRead(photoRPin);
+ myservo.write(45);
+ 
+ if ( lightLevel < 600 )
+ {
+     Serial.println("SIGNAL");
+     myservo.write(135);
+ }
+ 
+ delay(50);
+}
+				</pre>	
 			</section>
 			
 		</div>
